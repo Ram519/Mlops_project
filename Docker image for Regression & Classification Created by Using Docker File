@@ -1,0 +1,19 @@
+FROM centos:latest
+
+
+RUN yum install epel-release -y &&\
+    yum update -y &&\
+    yum install python36 -y &&\
+    pip3 install sckit-learn &&\
+    pip3 install numpy &&\
+    pip3 install pandas &&\
+    pip3 install matplotlib &&\
+    pip3 install pillow &&\
+    yum update -y
+     
+     
+     
+     
+     
+#coomand to create Image dockerfile
+' docker build -t lrcpython /ws/ '
