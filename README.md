@@ -20,12 +20,12 @@ this article is show how the automation occur between machine learning code and 
 
 tasks: 
 
-Create a container image that has Python3 and Keras or numpy installed using dockerfile.
- When we launch container using this created images, it should automatically starts Container and train the model in the present container.
-create a job chain of job1, job2, job3 and job4 using build pipeline plugin in Jenkins 
+->Create a container image that has Python3 and Keras or numpy installed using dockerfile.
+-> When we launch container using this created images, it should automatically starts Container and train the model in the present container.
+->create a job chain of job1, job2, job3 and job4 using build pipeline plugin in Jenkins 
 Job1 : Pull the Python file present in Github repo automatically ,when developers push file to Github. and By looking at the code or program file, Jenkins should automatically start or create the respective Container which have machine learning software installed interpreter to train the model using appropriate image ( eg. If code uses CNN, then Jenkins should start the container that has already installed all the software required for the CNN processing).
- Job 2: Train your model and predict accuracy or metrics. If metrics accuracy is less than 95% , then tweak the machine learning model architecture. Retrain the model and get the train model by triggering Job3
-Job3: This job sent the notification to developer or If we already provide a Hyperparameter to Job3 then job3 import the hyper-parameters in the python code and retrain the model until we get Accuracy greater than our Specified limit.
-Create One extra job job5 for monitor : If container, where app is running, fails due to any reason then this job should automatically start the container again. And also sent a mail to developer.
+->Job 2: Train your model and predict accuracy or metrics. If metrics accuracy is less than 95% , then tweak the machine learning model architecture. Retrain the model and get the train model by triggering Job3
+->Job3: This job sent the notification to developer or If we already provide a Hyperparameter to Job3 then job3 import the hyper-parameters in the python code and retrain the model until we get Accuracy greater than our Specified limit.
+->Create One extra job job5 for monitor : If container, where app is running, fails due to any reason then this job should automatically start the container again. And also sent a mail to developer.
 
 for details about my project you can see on  https://www.linkedin.com/pulse/why-60-ml-project-never-implemented-rameshwar-somvanshi/?trackingId=Y3%2FoAWHNRQSqDTeBcbNs9g%3D%3D
